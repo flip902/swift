@@ -8,15 +8,15 @@
 
 import UIKit
 
-//protocol SelectRoomTypeTableViewControllerDelegate: class {
-//    func didSelect(roomType: RoomType)
-//}
+protocol SelectRoomTypeTableViewControllerDelegate: class {
+    func didSelect(roomType: RoomType)
+}
 
 class SelectRoomTypeTableViewController: UITableViewController {
     
     var roomType: RoomType?
     
-    //weak var delegate: SelectRoomTypeTableViewControllerDelegate?
+    var delegate: SelectRoomTypeTableViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,8 @@ class SelectRoomTypeTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     // MARK: - Table view data source
     
@@ -50,11 +52,13 @@ class SelectRoomTypeTableViewController: UITableViewController {
         cell.textLabel?.text = roomType.name
         cell.detailTextLabel?.text = "$ \(roomType.price)"
         
-        if roomType == self.roomType {
+        
+        if roomType.name == self.roomType?.name  {
             cell.accessoryType = .checkmark
         } else {
             cell.accessoryType = .none
         }
+        
         
         return cell
     }
@@ -62,9 +66,11 @@ class SelectRoomTypeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         roomType = RoomType.all[indexPath.row]
-        //delegate?.didSelect(roomType: roomType!)
+        delegate?.didSelect(roomType: roomType!)
         tableView.reloadData()
     }
+    
+    
     
     
     /*

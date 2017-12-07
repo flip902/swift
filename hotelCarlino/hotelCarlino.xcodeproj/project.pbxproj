@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		11ACF44B1FCB3BBE00C584B6 /* SelectRoomTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ACF44A1FCB3BBE00C584B6 /* SelectRoomTypeTableViewController.swift */; };
 		11ACF44D1FCB878200C584B6 /* RoomType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ACF44C1FCB878200C584B6 /* RoomType.swift */; };
+		11BFB36B1FCE14DE00002A84 /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFB36A1FCE14DE00002A84 /* RegistrationTableViewController.swift */; };
 		11EB48931FC3C21000C049F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB48921FC3C21000C049F7 /* AppDelegate.swift */; };
 		11EB48981FC3C21000C049F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EB48961FC3C21000C049F7 /* Main.storyboard */; };
 		11EB489A1FC3C21000C049F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11EB48991FC3C21000C049F7 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		11ACF44A1FCB3BBE00C584B6 /* SelectRoomTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomTypeTableViewController.swift; sourceTree = "<group>"; };
 		11ACF44C1FCB878200C584B6 /* RoomType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomType.swift; sourceTree = "<group>"; };
+		11BFB36A1FCE14DE00002A84 /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
 		11EB488F1FC3C21000C049F7 /* hotelCarlino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hotelCarlino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EB48921FC3C21000C049F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11EB48971FC3C21000C049F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,12 +62,13 @@
 		11EB48911FC3C21000C049F7 /* hotelCarlino */ = {
 			isa = PBXGroup;
 			children = (
+				11EB48921FC3C21000C049F7 /* AppDelegate.swift */,
 				11ACF44C1FCB878200C584B6 /* RoomType.swift */,
 				11EB48A61FC3CCE000C049F7 /* Registration.swift */,
-				11EB48921FC3C21000C049F7 /* AppDelegate.swift */,
 				11EB48961FC3C21000C049F7 /* Main.storyboard */,
 				11EB48A41FC3C5F300C049F7 /* AddRegistrationTableViewController.swift */,
 				11ACF44A1FCB3BBE00C584B6 /* SelectRoomTypeTableViewController.swift */,
+				11BFB36A1FCE14DE00002A84 /* RegistrationTableViewController.swift */,
 				11EB48991FC3C21000C049F7 /* Assets.xcassets */,
 				11EB489B1FC3C21000C049F7 /* LaunchScreen.storyboard */,
 				11EB489E1FC3C21000C049F7 /* Info.plist */,
@@ -149,6 +152,7 @@
 				11EB48A51FC3C5F300C049F7 /* AddRegistrationTableViewController.swift in Sources */,
 				11ACF44D1FCB878200C584B6 /* RoomType.swift in Sources */,
 				11EB48A71FC3CCE000C049F7 /* Registration.swift in Sources */,
+				11BFB36B1FCE14DE00002A84 /* RegistrationTableViewController.swift in Sources */,
 				11EB48931FC3C21000C049F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

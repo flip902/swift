@@ -8,7 +8,12 @@
 
 import UIKit
 
-class AddRegistrationTableViewController: UITableViewController {
+class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeTableViewControllerDelegate {
+    func didSelect(roomType: RoomType) {
+        self.roomType = roomType
+        updateRoomType()
+    }
+    
     
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -25,6 +30,22 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBOutlet weak var numberOfChildrenStepper: UIStepper!
     
     @IBOutlet weak var wifiSwitch: UISwitch!
+    
+    var registration: Registration? {
+        guard let roomType = roomType else { return nil }
+        
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let checkInDate = checkInDatePicker.date
+        let checkOutDate = checkOutDatePicker.date
+        let numberOfAdults = Int(numberOfAdultsStepper.value)
+        let numberOfChildren = Int(numberOfChildrenStepper.value)
+        let hasWifi = wifiSwitch.isOn
+        
+        return Registration(firstName: firstName, lastName: lastName, email: email, checkInDate: checkInDate, checkOutDate: checkOutDate, numberOfAdults: numberOfAdults, numberOfChildren: numberOfChildren, roomType: roomType, wifi: hasWifi)
+    }
+    
     
     
     let checkInDatePickerCellIndexPath = IndexPath(row: 1, section: 1)
@@ -54,32 +75,11 @@ class AddRegistrationTableViewController: UITableViewController {
         
         updateDateViews()
         updateNumberOfGuests()
+        updateRoomType()
 
         
     }
 
-    @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
-        let firstName = firstNameTextField.text ?? ""
-        let lastName = lastNameTextField.text ?? ""
-        let email = emailTextField.text ?? ""
-        let checkInDate = checkInDatePicker.date
-        let checkOutDate = checkOutDatePicker.date
-        let numberOfAdults = Int(numberOfAdultsStepper.value)
-        let numberOfChildren = Int(numberOfChildrenStepper.value)
-        let hasWifi = wifiSwitch.isOn
-        
-        print("Done tapped")
-        print("First Name: \(firstName)")
-        print("Last Name: \(lastName)")
-        print("Email: \(email)")
-        print("Check In: \(checkInDate)")
-        print("Check Out: \(checkOutDate)")
-        print("Number of Adults: \(numberOfAdults)")
-        print("Number of Children: \(numberOfChildren)")
-        print("wifi: \(hasWifi)")
-    }
-    
-    
     
     func updateDateViews() {
         checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)
@@ -88,6 +88,12 @@ class AddRegistrationTableViewController: UITableViewController {
         checkInDateLabel.text = dateFormatter.string(from: checkInDatePicker.date)
         checkOutDateLabel.text = dateFormatter.string(from: checkOutDatePicker.date)
     }
+    
+    
+    @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         updateDateViews()
@@ -98,6 +104,18 @@ class AddRegistrationTableViewController: UITableViewController {
     }
     
     @IBAction func wifiSwitchChanged(_ sender: UISwitch) {
+    }
+    
+    @IBOutlet weak var roomTypeLabel: UILabel!
+    
+    var roomType: RoomType?
+    
+    func updateRoomType() {
+        if let roomType = roomType {
+            roomTypeLabel.text = roomType.name
+        } else {
+            roomTypeLabel.text = "Not Set"
+        }
     }
     
     
@@ -157,7 +175,15 @@ class AddRegistrationTableViewController: UITableViewController {
         numberOfChildrenLabel.text = "\(Int(numberOfChildrenStepper.value))"
     }
     
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectRoomType" {
+            let destinationViewController = segue.destination as?
+            SelectRoomTypeTableViewController
+            destinationViewController?.delegate = self
+            destinationViewController?.roomType = roomType
+        }
+    }
+
     
     
     
