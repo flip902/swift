@@ -11,7 +11,7 @@ import Foundation
 struct PhotoInfoController {
     func fetchPhotoInfo(completion: @escaping (PhotoInfo?) -> Void) {
         let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
-        let query: [String: String] = ["api_key": "DEMO_KEY"]
+        let query: [String: String] = ["api_key": "DEMO_KEY", "date": "2017-10-30"]
         let url = baseURL.withQueries(query)!
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in

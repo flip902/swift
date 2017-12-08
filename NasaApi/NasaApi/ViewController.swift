@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     }
 
     func updateUI(with photoInfo: PhotoInfo) {
+        guard let url = photoInfo.url.withHTTPS() else { return }
         let task = URLSession.shared.dataTask(with: photoInfo.url) { (data, response, error) in
             if let data = data,
                 let image = UIImage(data: data) {
