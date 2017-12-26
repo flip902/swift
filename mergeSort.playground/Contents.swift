@@ -15,7 +15,7 @@ func mergeSort(_ array: [Int]) -> [Int] {
 
 func merge(leftPile: [Int], rightPile: [Int]) -> [Int] {
     // You need two indexes to keep track of your progress for the two arrays merging
-    
+    var leftIndex = 
     // This is the empty merged array, you build it up in steps appending elements from other arrays
     
     
