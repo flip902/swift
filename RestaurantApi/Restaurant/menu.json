@@ -1,50 +1,50 @@
 [
   {
     "id": 1,
-    "name": "Spaghetti and Meatballs",
-    "description": "Seasoned meatballs on top of freshly-made spaghetti. Served with a robust tomato sauce.",
+    "name": "Chemo",
+    "description": "Chemo is great for pain and depression, and is known to increase appitite",
     "price": 9.0,
-    "category": "entrees",
-    "imageName": "spegettiAndMeatballs.jpg"
+    "category": "Strains",
+    "imageName": "chemo.JPG"
   },
   {
     "id": 2,
-    "name": "Margherita Pizza",
-    "description": "Tomato sauce, fresh mozzarella, basil, and extra-virgin olive oil.",
+    "name": "Cotton Candy",
+    "description": "Cotton Candy has a wonderful aroma and taste, uplifting high.",
     "price": 10.0,
-    "category": "entrees",
-    "imageName": "margheritaPizza.jpg"
+    "category": "Strains",
+    "imageName": "cottenCandy.JPG"
   },
   {
     "id": 3,
-    "name": "Grilled Steelhead Trout Sandwich",
-    "description": "Pacific steelhead trout* with lettuce, tomato, and red onion.",
-    "price": 9.0,
-    "category": "entrees",
-    "imageName": "grilledSteelheadTroutSandwich.jpg"
+    "name": "Death Bubba",
+    "description": "One of the strongest strains, high THC and great taste",
+    "price": 10.0,
+    "category": "Strains",
+    "imageName": "deathBubba.JPG"
   },
   {
     "id": 4,
-    "name": "Pesto Linguini",
-    "description": "Stewed sliced beef with yellow onions and garlic in a vinegar-soy sauce. Served with steamed jasmine rice and sautéed vegetables.",
+    "name": "Rockstar",
+    "description": "Mild uphoric high, grat taste, dense buds.",
     "price": 9.0,
-    "category": "entrees",
-    "imageName": "pestoLinguini.jpg"
+    "category": "Strains",
+    "imageName": "rockstar.JPG"
   },
   {
     "id": 5,
-    "name": "Chicken Noodle Soup",
-    "description": "Delicious chicken simmered alongside yellow onions, carrots, celery, and bay leaves, chicken stock.",
-    "price": 3.0,
-    "category": "appetizers",
-    "imageName": "chickenNoodleSoup.jpg"
+    "name": "Old School",
+    "description": "Great taste, soft light brown, great for pain.",
+    "price": 15.0,
+    "category": "Hash",
+    "imageName": "hash.jpg"
   },
   {
     "id": 6,
-    "name": "Italian Salad",
-    "description": "Garlic, red onions, tomatoes, mushrooms, and olives on top of romaine lettuce.",
-    "price": 5.0,
-    "category": "appetizers",
-    "imageName": "italianSalad.jpg"
+    "name": "Red Leb",
+    "description": "Soft Red center, sweet taste, great for insomnia.",
+    "price": 15.0,
+    "category": "Hash",
+    "imageName": "redLeb.JPG"
   }
 ]

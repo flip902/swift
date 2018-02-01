@@ -1,5 +1,4 @@
 import Foundation
-
 struct Employee: Equatable, Comparable, Codable {
     var firstName: String
     var lastName: String

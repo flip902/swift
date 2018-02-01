@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Fong's Restaurant-->
+        <!--Cloud Café-->
         <scene sceneID="a5e-sm-vsH">
             <objects>
                 <tableViewController id="NeF-rm-3kG" customClass="CategoryTableViewController" customModule="RestaurantApi" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                             <outlet property="delegate" destination="NeF-rm-3kG" id="soT-Je-7YO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Fong's Restaurant" id="EkK-fU-SOl"/>
+                    <navigationItem key="navigationItem" title="Cloud Café" id="EkK-fU-SOl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuT-Al-ync" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

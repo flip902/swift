@@ -1,0 +1,6 @@
+framework module Pods_mySqlLoginApp {
+  umbrella header "Pods-mySqlLoginApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

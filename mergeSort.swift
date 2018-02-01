@@ -28,6 +28,8 @@ func merge(leftPile: [Int], rightPile: [Int]) -> [Int] {
     } else {
       orderedPile.append(leftPile[leftIndex])
       rightIndex += 1
+      orderedPile.append(rightPile[rightIndex])
+      rightIndex += 1
     }
   }
  

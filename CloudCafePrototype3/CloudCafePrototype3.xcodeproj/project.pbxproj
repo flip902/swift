@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11CB2FE12005937600C06E85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CB2FE02005937600C06E85 /* AppDelegate.swift */; };
+		11CB2FE82005937600C06E85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11CB2FE72005937600C06E85 /* Assets.xcassets */; };
+		11CB2FEB2005937600C06E85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CB2FE92005937600C06E85 /* LaunchScreen.storyboard */; };
+		11CB2FF62005937700C06E85 /* CloudCafePrototype3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CB2FF52005937700C06E85 /* CloudCafePrototype3Tests.swift */; };
+		11CB30012005937700C06E85 /* CloudCafePrototype3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CB30002005937700C06E85 /* CloudCafePrototype3UITests.swift */; };
+		11CB300F200596A400C06E85 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CB300E200596A400C06E85 /* MainTabBarController.swift */; };
+		11CB30112005BBA900C06E85 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CB30102005BBA900C06E85 /* HomeViewController.swift */; };
+		11CB30132005BBDC00C06E85 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CB30122005BBDC00C06E85 /* ProductsTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11CB2FF22005937700C06E85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11CB2FD52005937600C06E85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11CB2FDC2005937600C06E85;
+			remoteInfo = CloudCafePrototype3;
+		};
+		11CB2FFD2005937700C06E85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11CB2FD52005937600C06E85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11CB2FDC2005937600C06E85;
+			remoteInfo = CloudCafePrototype3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11CB2FDD2005937600C06E85 /* CloudCafePrototype3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCafePrototype3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11CB2FE02005937600C06E85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11CB2FE72005937600C06E85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11CB2FEA2005937600C06E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11CB2FEC2005937700C06E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CB2FF12005937700C06E85 /* CloudCafePrototype3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudCafePrototype3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11CB2FF52005937700C06E85 /* CloudCafePrototype3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCafePrototype3Tests.swift; sourceTree = "<group>"; };
+		11CB2FF72005937700C06E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CB2FFC2005937700C06E85 /* CloudCafePrototype3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudCafePrototype3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11CB30002005937700C06E85 /* CloudCafePrototype3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudCafePrototype3UITests.swift; sourceTree = "<group>"; };
+		11CB30022005937700C06E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CB300E200596A400C06E85 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		11CB30102005BBA900C06E85 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		11CB30122005BBDC00C06E85 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11CB2FDA2005937600C06E85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CB2FEE2005937700C06E85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CB2FF92005937700C06E85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11CB2FD42005937600C06E85 = {
+			isa = PBXGroup;
+			children = (
+				11CB2FDF2005937600C06E85 /* CloudCafePrototype3 */,
+				11CB2FF42005937700C06E85 /* CloudCafePrototype3Tests */,
+				11CB2FFF2005937700C06E85 /* CloudCafePrototype3UITests */,
+				11CB2FDE2005937600C06E85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11CB2FDE2005937600C06E85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11CB2FDD2005937600C06E85 /* CloudCafePrototype3.app */,
+				11CB2FF12005937700C06E85 /* CloudCafePrototype3Tests.xctest */,
+				11CB2FFC2005937700C06E85 /* CloudCafePrototype3UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11CB2FDF2005937600C06E85 /* CloudCafePrototype3 */ = {
+			isa = PBXGroup;
+			children = (
+				11CB2FE02005937600C06E85 /* AppDelegate.swift */,
+				11CB2FE72005937600C06E85 /* Assets.xcassets */,
+				11CB300E200596A400C06E85 /* MainTabBarController.swift */,
+				11CB30102005BBA900C06E85 /* HomeViewController.swift */,
+				11CB30122005BBDC00C06E85 /* ProductsTableViewController.swift */,
+				11CB2FE92005937600C06E85 /* LaunchScreen.storyboard */,
+				11CB2FEC2005937700C06E85 /* Info.plist */,
+			);
+			path = CloudCafePrototype3;
+			sourceTree = "<group>";
+		};
+		11CB2FF42005937700C06E85 /* CloudCafePrototype3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				11CB2FF52005937700C06E85 /* CloudCafePrototype3Tests.swift */,
+				11CB2FF72005937700C06E85 /* Info.plist */,
+			);
+			path = CloudCafePrototype3Tests;
+			sourceTree = "<group>";
+		};
+		11CB2FFF2005937700C06E85 /* CloudCafePrototype3UITests */ = {
+			isa = PBXGroup;
+			children = (
+				11CB30002005937700C06E85 /* CloudCafePrototype3UITests.swift */,
+				11CB30022005937700C06E85 /* Info.plist */,
+			);
+			path = CloudCafePrototype3UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11CB2FDC2005937600C06E85 /* CloudCafePrototype3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11CB30052005937700C06E85 /* Build configuration list for PBXNativeTarget "CloudCafePrototype3" */;
+			buildPhases = (
+				11CB2FD92005937600C06E85 /* Sources */,
+				11CB2FDA2005937600C06E85 /* Frameworks */,
+				11CB2FDB2005937600C06E85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudCafePrototype3;
+			productName = CloudCafePrototype3;
+			productReference = 11CB2FDD2005937600C06E85 /* CloudCafePrototype3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11CB2FF02005937700C06E85 /* CloudCafePrototype3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11CB30082005937700C06E85 /* Build configuration list for PBXNativeTarget "CloudCafePrototype3Tests" */;
+			buildPhases = (
+				11CB2FED2005937700C06E85 /* Sources */,
+				11CB2FEE2005937700C06E85 /* Frameworks */,
+				11CB2FEF2005937700C06E85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11CB2FF32005937700C06E85 /* PBXTargetDependency */,
+			);
+			name = CloudCafePrototype3Tests;
+			productName = CloudCafePrototype3Tests;
+			productReference = 11CB2FF12005937700C06E85 /* CloudCafePrototype3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		11CB2FFB2005937700C06E85 /* CloudCafePrototype3UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11CB300B2005937700C06E85 /* Build configuration list for PBXNativeTarget "CloudCafePrototype3UITests" */;
+			buildPhases = (
+				11CB2FF82005937700C06E85 /* Sources */,
+				11CB2FF92005937700C06E85 /* Frameworks */,
+				11CB2FFA2005937700C06E85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11CB2FFE2005937700C06E85 /* PBXTargetDependency */,
+			);
+			name = CloudCafePrototype3UITests;
+			productName = CloudCafePrototype3UITests;
+			productReference = 11CB2FFC2005937700C06E85 /* CloudCafePrototype3UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11CB2FD52005937600C06E85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Phillip Carlino";
+				TargetAttributes = {
+					11CB2FDC2005937600C06E85 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					11CB2FF02005937700C06E85 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 11CB2FDC2005937600C06E85;
+					};
+					11CB2FFB2005937700C06E85 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 11CB2FDC2005937600C06E85;
+					};
+				};
+			};
+			buildConfigurationList = 11CB2FD82005937600C06E85 /* Build configuration list for PBXProject "CloudCafePrototype3" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11CB2FD42005937600C06E85;
+			productRefGroup = 11CB2FDE2005937600C06E85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11CB2FDC2005937600C06E85 /* CloudCafePrototype3 */,
+				11CB2FF02005937700C06E85 /* CloudCafePrototype3Tests */,
+				11CB2FFB2005937700C06E85 /* CloudCafePrototype3UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11CB2FDB2005937600C06E85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11CB2FEB2005937600C06E85 /* LaunchScreen.storyboard in Resources */,
+				11CB2FE82005937600C06E85 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CB2FEF2005937700C06E85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CB2FFA2005937700C06E85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11CB2FD92005937600C06E85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11CB2FE12005937600C06E85 /* AppDelegate.swift in Sources */,
+				11CB30132005BBDC00C06E85 /* ProductsTableViewController.swift in Sources */,
+				11CB300F200596A400C06E85 /* MainTabBarController.swift in Sources */,
+				11CB30112005BBA900C06E85 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CB2FED2005937700C06E85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11CB2FF62005937700C06E85 /* CloudCafePrototype3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CB2FF82005937700C06E85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11CB30012005937700C06E85 /* CloudCafePrototype3UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11CB2FF32005937700C06E85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11CB2FDC2005937600C06E85 /* CloudCafePrototype3 */;
+			targetProxy = 11CB2FF22005937700C06E85 /* PBXContainerItemProxy */;
+		};
+		11CB2FFE2005937700C06E85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11CB2FDC2005937600C06E85 /* CloudCafePrototype3 */;
+			targetProxy = 11CB2FFD2005937700C06E85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11CB2FE92005937600C06E85 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11CB2FEA2005937600C06E85 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11CB30032005937700C06E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		11CB30042005937700C06E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11CB30062005937700C06E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T29WFY4Z2P;
+				INFOPLIST_FILE = CloudCafePrototype3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haligrove.CloudCafePrototype3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		11CB30072005937700C06E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T29WFY4Z2P;
+				INFOPLIST_FILE = CloudCafePrototype3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haligrove.CloudCafePrototype3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		11CB30092005937700C06E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T29WFY4Z2P;
+				INFOPLIST_FILE = CloudCafePrototype3Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haligrove.CloudCafePrototype3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudCafePrototype3.app/CloudCafePrototype3";
+			};
+			name = Debug;
+		};
+		11CB300A2005937700C06E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T29WFY4Z2P;
+				INFOPLIST_FILE = CloudCafePrototype3Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haligrove.CloudCafePrototype3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudCafePrototype3.app/CloudCafePrototype3";
+			};
+			name = Release;
+		};
+		11CB300C2005937700C06E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T29WFY4Z2P;
+				INFOPLIST_FILE = CloudCafePrototype3UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haligrove.CloudCafePrototype3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CloudCafePrototype3;
+			};
+			name = Debug;
+		};
+		11CB300D2005937700C06E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T29WFY4Z2P;
+				INFOPLIST_FILE = CloudCafePrototype3UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haligrove.CloudCafePrototype3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CloudCafePrototype3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11CB2FD82005937600C06E85 /* Build configuration list for PBXProject "CloudCafePrototype3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11CB30032005937700C06E85 /* Debug */,
+				11CB30042005937700C06E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11CB30052005937700C06E85 /* Build configuration list for PBXNativeTarget "CloudCafePrototype3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11CB30062005937700C06E85 /* Debug */,
+				11CB30072005937700C06E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11CB30082005937700C06E85 /* Build configuration list for PBXNativeTarget "CloudCafePrototype3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11CB30092005937700C06E85 /* Debug */,
+				11CB300A2005937700C06E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11CB300B2005937700C06E85 /* Build configuration list for PBXNativeTarget "CloudCafePrototype3UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11CB300C2005937700C06E85 /* Debug */,
+				11CB300D2005937700C06E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11CB2FD52005937600C06E85 /* Project object */;
+}
