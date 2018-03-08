@@ -13,13 +13,77 @@ class UserProfileHeader: UICollectionViewCell {
     
     var user: User? {
         didSet {
-            setupProfileImage()
+            guard let profileImageUrl = user?.profileImageUrl else { return }
+            profileImageView.loadImage(urlString: profileImageUrl)
             usernameLabel.text = user?.username
+            
+            setupEditFollowButton()
         }
     }
     
-    let profileImageView: UIImageView = {
-        let iv = UIImageView()
+    fileprivate func setupEditFollowButton() {
+        
+        guard let currentLoggedInUserId = Auth.auth().currentUser?.uid else { return }
+        guard let userId = user?.uid else { return }
+        if currentLoggedInUserId == userId {
+            // edit profile
+        } else {
+            
+            // check if following
+            Database.database().reference().child("following").child(currentLoggedInUserId).child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
+                if let isFollowing = snapshot.value as? Int, isFollowing == 1 {
+                    self.editProfileFollowButton.setTitle("Unfollow", for: .normal)
+                } else {
+                   self.setupFollowStyle()
+                }
+            }) { (err) in
+                print("Failed to check if following: ", err)
+            }
+        }
+        
+    }
+    
+    @objc func handleEditProfileOrFollow() {
+        print("Execute edit profile / follow / unfollow logic ...")
+        
+        guard let currentLoggedInUserId = Auth.auth().currentUser?.uid else { return }
+        guard let userId = user?.uid else { return }
+        
+        if editProfileFollowButton.titleLabel?.text == "Unfollow" {
+            Database.database().reference().child("following").child(currentLoggedInUserId).child(userId).removeValue { (err, ref) in
+                if let err = err {
+                    print("Failed to unfollow user:", err)
+                    return
+                }
+                print("Successfully unfollowed user:", self.user?.username ?? "")
+                self.setupFollowStyle()
+            }
+        } else {
+            let ref = Database.database().reference().child("following").child(currentLoggedInUserId)
+            let values = [userId: 1]
+            ref.updateChildValues(values) { (err, ref) in
+                if let err = err {
+                    print("Failed to follow user:", err)
+                    return
+                }
+                
+                print("Successfully followed user: ", self.user?.username ?? "")
+                self.editProfileFollowButton.setTitle("Unfollow", for: .normal)
+                self.editProfileFollowButton.backgroundColor = .white
+                self.editProfileFollowButton.setTitleColor(.black, for: .normal)
+            }
+        }
+    }
+    
+    fileprivate func setupFollowStyle() {
+        self.editProfileFollowButton.setTitle("Follow", for: .normal)
+        self.editProfileFollowButton.backgroundColor = UIColor.rgb(red: 17, green: 154, blue: 237)
+        self.editProfileFollowButton.setTitleColor(.white, for: .normal)
+        self.editProfileFollowButton.layer.borderColor = UIColor(white: 0, alpha: 0.2).cgColor
+    }
+    
+    let profileImageView: CustomImageView = {
+        let iv = CustomImageView()
         return iv
     }()
     
@@ -80,7 +144,7 @@ class UserProfileHeader: UICollectionViewCell {
         return label
     }()
     
-    let editProfileButton: UIButton = {
+    lazy var editProfileFollowButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Edit Profile", for: .normal)
         button.setTitleColor(.black, for: .normal)
@@ -88,8 +152,12 @@ class UserProfileHeader: UICollectionViewCell {
         button.layer.borderWidth = 1
         button.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         button.layer.cornerRadius = 3
+        button.addTarget(self, action: #selector(handleEditProfileOrFollow), for: .touchUpInside)
+        
         return button
     }()
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -106,8 +174,8 @@ class UserProfileHeader: UICollectionViewCell {
         
         setupUserStatsView()
         
-        addSubview(editProfileButton)
-        editProfileButton.anchor(top: postsLabel.bottomAnchor, right: followingLabel.rightAnchor, bottom: nil, left: postsLabel.leftAnchor, paddingTop: 8, paddingRight: 0, paddingBottom: 0, paddingLeft: 0, width: 0, height: 35)
+        addSubview(editProfileFollowButton)
+        editProfileFollowButton.anchor(top: postsLabel.bottomAnchor, right: followingLabel.rightAnchor, bottom: nil, left: postsLabel.leftAnchor, paddingTop: 8, paddingRight: 0, paddingBottom: 0, paddingLeft: 0, width: 0, height: 35)
     }
     
     fileprivate func setupUserStatsView() {
@@ -139,25 +207,6 @@ class UserProfileHeader: UICollectionViewCell {
         topDividerView.anchor(top: stackView.topAnchor, right: rightAnchor, bottom: nil, left: leftAnchor, paddingTop: 0, paddingRight: 0, paddingBottom: 0, paddingLeft: 0, width: 0, height: 0.5)
         
         bottomDividerView.anchor(top: stackView.bottomAnchor, right: rightAnchor, bottom: nil, left: leftAnchor, paddingTop: 0, paddingRight: 0, paddingBottom: 0, paddingLeft: 0, width: 0, height: 0.5)
-    }
-    
-    fileprivate func setupProfileImage() {
-        
-        guard let profileImageUrl = user?.profileImageUrl else { return }
-        guard let url = URL(string: profileImageUrl) else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, err) in
-            if let err = err {
-                print("Failed to fetch profile image:", err)
-                return
-            }
-            guard let data = data else { return }
-            let image = UIImage(data: data)
-            DispatchQueue.main.async {
-                self.profileImageView.image = image
-            }
-            
-            }.resume()
     }
     
     required init?(coder aDecoder: NSCoder) {
