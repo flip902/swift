@@ -21,9 +21,37 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         collectionView?.register(HomePostCell.self, forCellWithReuseIdentifier: cellId)
         
-        setupNavigationItems()
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        collectionView?.refreshControl = refreshControl
         
+        setupNavigationItems()
+        fetchAllPosts()
+    }
+    
+    @objc func handleRefresh() {
+        print("handling refresh")
+        posts.removeAll()
+        fetchAllPosts()
+    }
+    
+    fileprivate func fetchAllPosts() {
         fetchPosts()
+        fetchFollowingUserIds()
+    }
+    
+    fileprivate func fetchFollowingUserIds() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Database.database().reference().child("following").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let userIdsDictionary = snapshot.value as? [String: Any] else { return }
+            userIdsDictionary.forEach({ (key, value) in
+                Database.fetchUserWithUid(uid: key, completion: { (user) in
+                    self.fetchPostWithUser(user: user)
+                })
+            })
+        }) { (err) in
+            print("Failed to fetch following user ids:", err)
+           }
     }
     
     var posts = [Post]()
@@ -38,6 +66,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     fileprivate func fetchPostWithUser(user: User) {
         let ref = Database.database().reference().child("posts").child(user.uid)
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            self.collectionView?.refreshControl?.endRefreshing()
             guard let dictionaries = snapshot.value as? [String: Any] else { return }
             
             dictionaries.forEach({ (key, value) in
@@ -47,7 +77,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                 
                 self.posts.append(post)
             })
-            
+            self.posts.sort(by: { (p1, p2) -> Bool in
+                return p1.creationDate.compare(p2.creationDate) == .orderedDescending
+            })
             self.collectionView?.reloadData()
             
         }) { (err) in
