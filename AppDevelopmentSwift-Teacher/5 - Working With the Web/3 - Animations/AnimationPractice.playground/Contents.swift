@@ -7,16 +7,16 @@ liveView.backgroundColor = .white
 
 PlaygroundPage.current.liveView = liveView
 
-let smallFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
+let smallFrame = CGRect(x: 0, y: 0, width: 200, height: 200)
 
 let square = UIView(frame: smallFrame)
 square.backgroundColor = .purple
 liveView.addSubview(square)
 
-UIView.animate(withDuration: 2.0, animations: {
+UIView.animate(withDuration: 3.0, animations: {
     square.backgroundColor = .orange
     
-    let scaleTransform = CGAffineTransform(scaleX: 2.0, y: 2.0)
+    let scaleTransform = CGAffineTransform(scaleX: 5.0, y: 5.0)
     let rotateTransform = CGAffineTransform(rotationAngle: .pi)
     let translateTransform = CGAffineTransform(translationX: 200, y: 200)
     
@@ -25,7 +25,7 @@ UIView.animate(withDuration: 2.0, animations: {
     square.transform = comboTransform
 }) { (_) in
     
-    UIView.animate(withDuration: 2.0, animations: { 
+    UIView.animate(withDuration: 3.0, animations: {
         
         square.transform = CGAffineTransform.identity
     })

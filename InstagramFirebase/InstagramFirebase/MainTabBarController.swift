@@ -33,6 +33,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
             DispatchQueue.main.async {
                 let loginController = LoginController()
                 let navController = UINavigationController(rootViewController: loginController)
+                
                 self.present(navController, animated: true, completion: nil)
             }
             return
@@ -80,14 +81,5 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         navController.tabBarItem.selectedImage = selectedImage
         return navController
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

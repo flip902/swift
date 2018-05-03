@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Haligram would like access to your nudes .. I .. I.. mean photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Can we have access to your photos at this time?</string>
 	<key>CFBundleDevelopmentRegion</key>
